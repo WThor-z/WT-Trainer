@@ -1,0 +1,12 @@
+[
+  {
+    "instruction": "你好吗？",
+    "input": "",
+    "output": "我很好，谢谢！"
+  },
+  {
+    "instruction": "今天天气怎么样？",
+    "input": "",
+    "output": "今天天气晴朗。"
+  }
+]

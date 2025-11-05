@@ -1,0 +1,8 @@
+# 代码审查配置
+/.isort.cfg
+/.pre-commit-config.yaml
+/.pylintrc
+/format_lint_typecheck.py
+/pyproject.toml
+/code_style.md
+/language_style.md
