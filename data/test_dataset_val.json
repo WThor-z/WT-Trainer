@@ -1,0 +1,32 @@
+[
+  {
+    "instruction": "将以下英文翻译成中文",
+    "input": "Hello, how are you today?",
+    "output": "你好，今天怎么样？"
+  },
+  {
+    "instruction": "将以下英文翻译成中文",
+    "input": "Hello, how are you today?",
+    "output": "你好，今天怎么样？"
+  },
+  {
+    "instruction": "将以下英文翻译成中文",
+    "input": "What is your name?",
+    "output": "你叫什么名字？"
+  },
+  {
+    "instruction": "将以下英文翻译成中文",
+    "input": "Hello, how are you today?",
+    "output": "你好，今天怎么样？"
+  },
+  {
+    "instruction": "计算以下数学题",
+    "input": "2 + 2 = ?",
+    "output": "2 + 2 = 4"
+  },
+  {
+    "instruction": "计算以下数学题",
+    "input": "2 + 2 = ?",
+    "output": "2 + 2 = 4"
+  }
+]

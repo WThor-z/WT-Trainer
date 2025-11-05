@@ -1,0 +1,502 @@
+[
+    {
+        "instruction": "Generate a web-safe color combination",
+        "input": "",
+        "output": "One web-safe color combination could be: \n- Background color: #FFFFFF (white)\n- Primary color: #0000FF (blue)\n- Secondary color: #FF0000 (red)\n- Tertiary color: #00FF00 (green)\n- Accent color: #FFFF00 (yellow)"
+    },
+    {
+        "instruction": "Two of the following words do not belong in the same category. Identify them.",
+        "input": "Saber, Shotgun, Spear",
+        "output": "Saber and Spear belong to the same category as they are both edged weapons used in combat. Shotgun, however, is a firearm and does not belong in this category. Thus, the two words that do not belong in the same category are Saber and Shotgun."
+    },
+    {
+        "instruction": "Make a list of four items needed to write a book.",
+        "input": "",
+        "output": "1. A computer or a notebook for writing and organizing the content.\n2. A clear and well-defined concept or outline to give the book structure and coherence.\n3. Inspiration, creativity and motivation to keep the writing process flowing.\n4. Research materials and resources for fact checking and expanding the depth of the content."
+    },
+    {
+        "instruction": "Generate a new password that is secure and memorable.",
+        "input": "",
+        "output": "Here is a secure and memorable password for you: \"Gr33n4pples&Sunshine!\" It combines upper and lower case letters, numbers, symbols and it is related to a pleasant and easy to remember phrase: Green Apples and Sunshine. Remember to keep your password safe and not share it with anyone."
+    },
+    {
+        "instruction": "Formulate a multiple-choice question on environmental conservation and provide four possible answers, with one being the correct choice.",
+        "input": "",
+        "output": "Which of the following best describes the primary goal of environmental conservation?\\nA. Protection of endangered species\\nB. Reduction of pollution\\nC. Preservation of natural resources and ecosystems\\nD. Promotion of tourism\\n\\nAnswer: C. Preservation of natural resources and ecosystems"
+    },
+    {
+        "instruction": "Describe the concept of artificial intelligence (AI) in two sentences.",
+        "input": "",
+        "output": "Artificial intelligence (AI) is a subfield of computer science that aims to develop intelligent machines that work and react like humans. It involves machine learning, natural language processing, and cognitive computing to enable systems to perform tasks that typically require human intelligence, such as problem solving, decision making, and language understanding."
+    },
+    {
+        "instruction": "Propose 3 meaningful questions based on the following article.",
+        "input": "The article is about genetically modified salmon.",
+        "output": "1.  What specific gene modifications have been made to the salmon and what benefits do they provide?\n2.  What are the potential risks or concerns associated with consuming genetically modified salmon?\n3.  How have regulations and public perceptions regarding genetically modified salmon evolved in recent years?"
+    },
+    {
+        "instruction": "Name three European countries with a population below 10 million.",
+        "input": "",
+        "output": "Three European countries with a population below 10 million are:\n\n1. Norway - with a population of approximately 5.4 million people.\n2. Denmark - with a population of approximately 5.8 million people.\n3. Finland - with a population of approximately 5.5 million people."
+    },
+    {
+        "instruction": "Calculate what percentage of 10 is 8",
+        "input": "",
+        "output": "Eight is 80% of 10. To get this answer, you can divide 8 by 10 and then multiply the result by 100 to convert it to a percentage. The formula is as follows: (8/10) * 100 = 80."
+    },
+    {
+        "instruction": "Name some of the major landmarks in London.",
+        "input": "",
+        "output": "1. Buckingham Palace\n2. Tower Bridge\n3. The Tower of London\n4. Big Ben and the Houses of Parliament\n5. The Shard\n6. Trafalgar Square\n7. The British Museum\n8. St. Paul’s Cathedral\n9. Westminster Abbey\n10. The London Eye"
+    },
+    {
+        "instruction": "Take the following tweet and turn it into persuasive copy:",
+        "input": "Check out our newest product!",
+        "output": "Don't miss out on the latest and greatest from our line of cutting-edge products! Our newest addition is something you won't want to miss. Experience innovation at its finest and elevate your daily routine. Get yours today and be the envy of all your friends! Check it out now."
+    },
+    {
+        "instruction": "Choose the better summary of the given context from the given two summaries.",
+        "input": "Context: Several icecaps on the Greenland ice sheet have started to melt rapidly.\n\nSummaries:\na. The Greenland ice sheet has lost numerous icecaps over time.\nb. Greenland's icecaps are quickly melting away.",
+        "output": "The better summary is summary b- Greenland's icecaps are quickly melting away."
+    },
+    {
+        "instruction": "Make a housing recommendation for a person with a budget of $1500 per month.",
+        "input": "",
+        "output": "Given a budget of $1500 per month, some good housing options include studio apartments, 1 bedroom apartments, room-share houses, or tiny homes. Rent price points and location availability may depend on the city, but these are all great options to consider."
+    },
+    {
+        "instruction": "Classify the following news article\n\nNews Article: \n\nApple Inc. reported a stronger than expected fiscal third quarter on Tuesday and announced plans to raise its dividend.",
+        "input": "News Article: \nApple Inc. reported a stronger than expected fiscal third quarter on Tuesday and announced plans to raise its dividend.",
+        "output": "The given news article can be classified under the category of Business & Finance news."
+    },
+    {
+        "instruction": "Insert a new paragraph into this text.",
+        "input": "This is an example of a sentence.",
+        "output": "This is an example of a sentence.\n\nHere is a new paragraph that has been inserted into the text. In this paragraph, we add additional information to elaborate on the main point introduced in the previous sentence. As a result, the reader has a better understanding of the topic being presented."
+    },
+    {
+        "instruction": "Describe the differences between warm and cold colors. Output must be less than 50 words.",
+        "input": "",
+        "output": "Warm colors, such as red, orange and yellow, convey energy, passion, and happiness while cold colors, like blue, green, and purple, evoke serenity, calmness, and relaxation. Warm colors appear to advance, while cool colors tend to recede."
+    },
+    {
+        "instruction": "Name a fictional character that displays a prominent trait.",
+        "input": "Trait: Self-sacrificing",
+        "output": "One fictional character that displays the prominent trait of self-sacrificing is Harry Potter from the Harry Potter series by J.K. Rowling. Throughout the series, Harry repeatedly puts himself in danger and sacrifices his own safety for the greater good and to protect his friends and loved ones."
+    },
+    {
+        "instruction": "Construct a query to search for the following topic in a database.",
+        "input": "Search for articles about the ethics of artificial intelligence.",
+        "output": "SELECT * FROM articles WHERE title LIKE '%ethics%' AND (title LIKE '%artificial intelligence%' OR title LIKE '%AI%') OR content LIKE '%ethics%' AND (content LIKE '%artificial intelligence%' OR content LIKE '%AI%')"
+    },
+    {
+        "instruction": "Given two items, create a metaphor that illustrates their relationship.",
+        "input": "snake and river",
+        "output": "The river flows smoothly and continuously through its bed, shaping its path, just as a snake skillfully slithers its way through the grass, defining its territory. The river is like the snake, weaving its way around obstacles, adapting to the landscape, fluid and graceful in its motion."
+    },
+    {
+        "instruction": "Find the range of numbers 25, 28, 30, 33",
+        "input": "",
+        "output": "The range of the numbers 25, 28, 30, 33 is 8. It is calculated by finding the difference between the largest and smallest number in the dataset, which is 33-25 = 8."
+    },
+    {
+        "instruction": "Provide some examples of job titles for a software engineer.",
+        "input": "",
+        "output": "1. Software Developer\n2. Front-End Engineer\n3. Back-End Engineer\n4. Full-Stack Developer\n5. DevOps Engineer\n6. Mobile Application Developer\n7. Embedded Software Engineer\n8. Systems Software Engineer\n9. Software Architect\n10. Data Engineer."
+    },
+    {
+        "instruction": "Identify any usage errors in the following sentence.",
+        "input": "We all need to take a walk on the wile side.",
+        "output": "The sentence contains a usage error where the word \"wile\" should be replaced with \"wild\" as it fits the intended meaning of the sentence. So, the corrected sentence is: We all need to take a walk on the wild side."
+    },
+    {
+        "instruction": "Connect the statement with a related example.",
+        "input": "The new AI system can help identify malicious activities.",
+        "output": "For example, with the implementation of the new AI system in a bank's online platform, it can monitor user activity and detect any unusual behavior such as multiple failed login attempts or unauthorized access to sensitive data, flagging it as potential malicious activity and alerting security measures."
+    },
+    {
+        "instruction": "Classify the following 10 items as either vegetables or fruits.\n\nTomato, Broccoli, Banana, Carrot, Apple, Lettuce, Mango, Peas, Watermelon, Potato",
+        "input": "",
+        "output": "Vegetables: Broccoli, Carrot, Lettuce, Peas, Potato\nFruits: Tomato, Banana, Apple, Mango, Watermelon"
+    },
+    {
+        "instruction": "What critically acclaimed 2016 movie has a setting of a post-apocalyptic wasteland?",
+        "input": "",
+        "output": "The movie you are likely thinking of is \"Mad Max: Fury Road,\" which was released in 2015 and has a setting of a post-apocalyptic wasteland. It received widespread critical acclaim for its action, direction, visuals, and performances."
+    },
+    {
+        "instruction": "Create a survey question to ask about a person's post-graduation plans.",
+        "input": "",
+        "output": "What are your plans after graduation? \na) Pursue higher education in my field \nb) Enter the workforce in my field \nc) Take a gap year to travel or pursue personal interests \nd) Start my own business \ne) I am still unsure of my plans"
+    },
+    {
+        "instruction": "What is the derivative of the function y = cos(x)?",
+        "input": "",
+        "output": "The derivative of the function `y = cos(x)` is `y' = -sin(x)`. This means that the slope of the tangent line to the function `y = cos(x)` at any point `x` is given by the value of `-sin(x)` at that point."
+    },
+    {
+        "instruction": "List the four characters in the 1971 movie Willy Wonka and the Chocolate Factory",
+        "input": "",
+        "output": "1. Willy Wonka, portrayed by Gene Wilder.\n2. Charlie Bucket, portrayed by Peter Ostrum.\n3. Grandpa Joe, portrayed by Jack Albertson.\n4. Augustus Gloop, portrayed by Michael Bollner."
+    },
+    {
+        "instruction": "Explain what a recursive function is in 50 words or less.",
+        "input": "",
+        "output": "A recursive function is a function that calls itself in its own definition, and solves a problem by breaking it down into increasingly smaller subproblems, until reaching a solution. Recursive functions must have a base case to prevent infinite recursion, and also a way to move towards the base case."
+    },
+    {
+        "instruction": "Rewrite the following sentence by removing informal expressions and simplifying the phrase.",
+        "input": "I had this sort of gut feeling that things were going, like, super downhill, but little did I know, it was just the tip of the iceberg!",
+        "output": "I intuited that things were getting worse, but I was unaware that it was only the beginning of the problem."
+    },
+    {
+        "instruction": "Generate a math problem for grade 5",
+        "input": "",
+        "output": "A farmer has three bags of wheat weighing 18kg, 16.5kg, and 25kg. He divided the wheat equally into smaller bags to give to his customers. If each bag he gives to the customers must weigh the same amount, what is the weight of each bag?"
+    },
+    {
+        "instruction": "Detect if the news is true. Output true or false.",
+        "input": "An asteroid will crash on Earth on the 25th December 2019.",
+        "output": "False. There was no asteroid collision reported on Earth on December 25th, 2019. Multiple sources and reputable agencies such as NASA have no record of such an event."
+    },
+    {
+        "instruction": "Generate a thesis statement based on the following description.\n\nDescription: The key principles behind effective physical exercise routines including warming up, cooling down, and rest recovery.",
+        "input": "",
+        "output": "The implementation of proper techniques such as warming up, cooling down, and sufficient rest recovery, are essential components of an effective physical exercise routine that can enhance performance and reduce the risk of injury."
+    },
+    {
+        "instruction": "Review the restaurant below and give it a 1-5 rating.",
+        "input": "The food at Cafe 5 was excellent. The service was friendly and efficient, and the atmosphere was pleasant and inviting.",
+        "output": "Based on your input, I would give Cafe 5 a rating of 5/5. The food, service, and atmosphere all received positive feedback."
+    },
+    {
+        "instruction": "Comment on how the customer service was.",
+        "input": "I stayed in the hotel for one night and the service was great. The staff were friendly and accommodating.",
+        "output": "It sounds like the customer service at the hotel was excellent during your stay. It's great to hear that the staff were friendly and accommodating, which likely helped to make your stay more pleasant and enjoyable."
+    },
+    {
+        "instruction": "What is the total number of bones in a human body?",
+        "input": "",
+        "output": "There are 206 bones in the adult human body. However, infants and young children have additional small bones, as many larger bones in their bodies have not fused together yet. As they grow, these additional bones fuse together, bringing the total down to 206."
+    },
+    {
+        "instruction": "Suggest one practical activity to help reduce air pollution.",
+        "input": "",
+        "output": "One practical activity that can help reduce air pollution is to reduce the use of personal cars for transport and instead, use public transportation, cycle, walk or carpool when possible. This reduces the number of vehicles on the road, which in turn reduces the emission of harmful gases into the atmosphere."
+    },
+    {
+        "instruction": "Cut the ingredients in half for the following recipe.",
+        "input": "1 lb bacon\n2 cups heavy cream\n6 large eggs\n2 tablespoons butter",
+        "output": "Sure! Here are the updated ingredient measurements for half the original recipe: \n\n- 1/2 lb bacon\n- 1 cup heavy cream\n- 3 large eggs\n- 1 tablespoon butter"
+    },
+    {
+        "instruction": "Classify the following passage as one of the following: argument, narration, exposition, or description.",
+        "input": "The broken window had not been noticed by anyone, but when it shattered in the middle of the night and shards of glass strewn around, a nearby neighbor heard the loud noise and started to investigate.",
+        "output": "The given passage is a narration."
+    },
+    {
+        "instruction": "Read the following passage and identify an example of figurative language.",
+        "input": "\"My troubles have wings and soar away into the sky\"",
+        "output": "The example of figurative language in the sentence is \"My troubles have wings and soar away into the sky\" which is a personification, as troubles are being given the human-like ability to fly away with wings."
+    },
+    {
+        "instruction": "Create a story problem involving the following fraction: 4/12",
+        "input": "",
+        "output": "Julie has a box of chocolates that is divided into 12 equal parts. She already ate 4 parts in the last two days. What fraction of the chocolates has Julie eaten?\n\n\nThe fraction of the chocolates that Julie ate is 4/12."
+    },
+    {
+        "instruction": "What was the primary purpose of this piece of code?",
+        "input": "Code:\ndef f(x):\n    return x * 3",
+        "output": "The primary purpose of this piece of code is to define a simple function named `f`, which takes a single argument `x` and returns the value of `x` multiplied by 3 when the function is called."
+    },
+    {
+        "instruction": "Summarize the following paragraph in one sentence.\n\nThe US government has pledged to reduce emissions and investments in clean energy but experts argue more needs to be done if the US wants to meet their climate targets.",
+        "input": "",
+        "output": "The US government aims to lower emissions and increase clean energy investment, but experts believe further action is required to achieve climate goals."
+    },
+    {
+        "instruction": "Convert 3 kg to grams",
+        "input": "",
+        "output": "To convert kilograms to grams, you need to multiply the number of kilograms by 1000, because there are 1000 grams in a kilogram. \n\nSo, 3 kilograms is equal to 3 * 1000 = 3000 grams."
+    },
+    {
+        "instruction": "Make a logical argument in three sentences.",
+        "input": "Homeschooling",
+        "output": "Homeschooling allows for personalized and individualized education plans that cater to a child's specific needs and learning style. This can result in a more effective and efficient learning experience for the child. Therefore, homeschooling can be a beneficial educational option for some families."
+    },
+    {
+        "instruction": "Now that you know the different ways to say hello in French, which one would you use if you were greeting a friend?",
+        "input": "",
+        "output": "If I were an AI greeting a friend in French, I would probably use \"Salut\" or \"Coucou\" because both are informal ways to say hello, perfect for greeting a friend."
+    },
+    {
+        "instruction": "Take the sentence \"The office is closed\" and create a tweet presenting it in a humorous way.",
+        "input": "",
+        "output": "\"Breaking News: The office has decided to follow its dreams and closed for the day. Reports confirm it's currently living its best life taking a much needed nap. 😴 #OfficeLife #ClosedForTheDay\""
+    },
+    {
+        "instruction": "Calculate the volume of a cube with side length 8 meters",
+        "input": "",
+        "output": "If the side length of a cube is 8 meters, the volume of the cube is calculated using the formula, (side length)^3. Therefore, the volume of the cube in question would be 8^3 = 512 cubic meters."
+    },
+    {
+        "instruction": "Identify the independent clause in the sentence: The boy went to the store, and he bought an ice cream.",
+        "input": "",
+        "output": "The independent clause in this sentence is \"The boy went to the store\" and \"he bought an ice cream\". Both are independent clauses because they can stand alone as complete sentences, conveying a complete thought."
+    },
+    {
+        "instruction": "Generate a list of ten words having the same meaning as \"powerful\".",
+        "input": "",
+        "output": "1. Mighty\n2. Strong\n3. Influential\n4. Potent\n5. Formidable\n6. Robust\n7. Dominant\n8. Vigorous\n9. Energetic\n10. Intense"
+    },
+    {
+        "instruction": "Find the net worth of Mark Zuckerberg.",
+        "input": "",
+        "output": "As of September 2021, according to Forbes, Mark Zuckerberg's net worth is estimated to be around $124.1 billion. It is important to note that this figure can change rapidly due to fluctuations in the stock market and the value of his assets."
+    },
+    {
+        "instruction": "Generate samples of data that satisfies the following constraints.",
+        "input": "Positive integer less than 10.",
+        "output": "Here are five different samples of data satisfying the constraint:\n\nSample 1: 7\nSample 2: 3\nSample 3: 9\nSample 4: 1\nSample 5: 6"
+    },
+    {
+        "instruction": "Write a sentence justifying your purchase of the given item.",
+        "input": "Yoga mat",
+        "output": "Purchasing a Yoga mat is great investment in your fitness and wellness journey, as it provides a comfortable and  stable surface to practice Yoga and other stretching exercises, allowing you to improve your balance, flexibility and overall physical and mental health."
+    },
+    {
+        "instruction": "Categorize the following item and determine price.",
+        "input": "A handmade wooden bowl",
+        "output": "Category: Home Décor, Household Items, Kitchen and Dining.\n \nThe price could range between $10 - $100 or more depending on the size, type of wood used, craftsmanship, and detailing of the handmade wooden bowl."
+    },
+    {
+        "instruction": "What was the name of the first novel written by Charles Dickens?",
+        "input": "",
+        "output": "The name of the first novel written by Charles Dickens was \"The Pickwick Papers,\" which was originally published in serial form in 1836-1837 under the title \"The Posthumous Papers of the Pickwick Club.\""
+    },
+    {
+        "instruction": "Create a new password using the provided criteria.",
+        "input": "Must contain at least 8 characters and include one upper-case letter, one lower-case letter, and one number.",
+        "output": "One possible password is \"S3cur3Pass\". It contains 9 characters with one upper-case letter, one lower-case letter, and one number."
+    },
+    {
+        "instruction": "Edit the following paragrapg to make it suitable for an newspaper article.",
+        "input": "Last Monday, an amazing event happend in our town. Everyone was super excited to watch it.",
+        "output": "On Monday, a remarkable event occurred in our town, which sparked excitement and anticipation among residents as they eagerly gathered to witness the spectacle."
+    },
+    {
+        "instruction": "Compose a tweet about the importance of community in times of crisis",
+        "input": "",
+        "output": "\"In times of crisis, the strength of a community shines through! Let's come together, support, and uplift each other, for together we are stronger and can overcome any challenge. 💪🌟 #Community #TogetherWeCan #CrisisResponse\""
+    },
+    {
+        "instruction": "Provide a valid solution to this digital logic circuit",
+        "input": "",
+        "output": "To provide a valid solution to a digital logic circuit, I will need more information about the circuit in question, such as its components, inputs, and desired outputs. Once I have this information, I can analyze the logic and provide a valid solution to the circuit."
+    },
+    {
+        "instruction": "What is the world population?",
+        "input": "",
+        "output": "According to the United Nations, the world population as of October 2021 is estimated at 7.9 billion people. It is important to note that the world population is dynamic, and constantly changes due to factors such as birth rates, death rates, and migration."
+    },
+    {
+        "instruction": "Calculate the tax rate on a purchase of 100 USD.",
+        "input": "",
+        "output": "The sales tax rate varies depending on the state or location within the United States where the purchase is being made. Without knowing the specific location, it is not possible to accurately calculate the tax rate on a purchase of 100 USD."
+    },
+    {
+        "instruction": "Calculate the sum of this series: 5+10+15+20+25",
+        "input": "",
+        "output": "The sum of the series is calculated as follows: \n\n5+10+15+20+25=75\n\nSo, the sum of the given series is 75."
+    },
+    {
+        "instruction": "Identify the main characters in a narrative about a high school dance battle.",
+        "input": "",
+        "output": "The narrative does not provide information for me to be able to identify the main characters. Could you please provide me with details of the story so that I could accurately identify the main characters in the narrative about a high school dance battle?"
+    },
+    {
+        "instruction": "Name a major world event of the past 10 years.",
+        "input": "",
+        "output": "One major world event of the past 10 years is the COVID-19 pandemic that began in 2019 and spread across the globe, causing unprecedented health crises, economic upheavals, and changes in social behavior."
+    },
+    {
+        "instruction": "Generate a story about a musician in less than 40 words.",
+        "input": "",
+        "output": "Once a homeless man, Alex poured his soul into every note he played on his guitar. Discovered by a record producer, he rose to fame, never forgetting his roots. His music touched hearts, giving hope to those in need."
+    },
+    {
+        "instruction": "Determine the longest river in South America.",
+        "input": "",
+        "output": "The longest river in South America is the Amazon River. It runs for approximately 4,000 miles (6,400 kilometers) through several South American countries including Brazil, Peru, Bolivia, Colombia, Ecuador, Venezuela, and Guyanas."
+    },
+    {
+        "instruction": "Given an English vocabulary word, define it in 1 to 2 sentences.",
+        "input": "Abrogate",
+        "output": "Abrogate means to abolish, repeal, or put an end to a formal agreement, law or system. It can refer to the official revocation of something by an authority, such as a government or legislative body."
+    },
+    {
+        "instruction": "Create an exampe of a polite request to a friend.",
+        "input": "",
+        "output": "\"Hey there, friend! Hope you're doing well. Would it be possible for you to lend me your notes from last lecture? I missed some points and I would really appreciate it if you could help me out. Thank you so much!\""
+    },
+    {
+        "instruction": "Find the longest palindrome in the provided text.",
+        "input": "RacEcar",
+        "output": "The longest palindrome in the provided text is \"RacEcar\". Palindromes are words or phrases that read the same backward and forward. Both letters and punctuation are considered when determining if a word or phrase is a palindrome."
+    },
+    {
+        "instruction": "Write 2-3 sentences about the knowledge presented in the given article.",
+        "input": "[Link to article]",
+        "output": "I'm sorry, but you didn't provide a link to the article for me to generate a response. Could you please provide me with the link or the content of the article you had in mind?"
+    },
+    {
+        "instruction": "Generate a responsive dialogue for the following query.",
+        "input": "Where can I find a nearby restaurant?",
+        "output": "As an AI, I can certainly help you find a restaurant near you! To provide the most accurate information, can you please tell me your location or the area in which you would like to search for a restaurant?"
+    },
+    {
+        "instruction": "Write a metaphor to explain the feeling of being stuck.",
+        "input": "",
+        "output": "Being stuck can feel like being a boat with a broken sail, stranded in the middle of the ocean - with the destination in sight but without the means or power to move forward, leaving you to the mercy of the tides and currents."
+    },
+    {
+        "instruction": "Explain in one sentence the difference between a module and a function.",
+        "input": "",
+        "output": "A module is a file containing a set of functions, variables and class definitions that can be imported and used in a program, while a function is a block of organized, reusable code that performs a specific task within a program."
+    },
+    {
+        "instruction": "Generate a warning message that could be used in a chatbot.",
+        "input": "",
+        "output": "'Warning: Please refrain from sharing any personal or sensitive information in this chat. This includes, but is not limited to, passwords, credit card numbers, and social security numbers. Remember to protect your privacy and stay safe online.'"
+    },
+    {
+        "instruction": "Provide an example of how someone can use the word \"reverie\".",
+        "input": "",
+        "output": "One example of using the word \"reverie\" can be: \"After a long and tiring day at work, John sat by the window, lost in a peaceful reverie, dreaming about his next vacation.\""
+    },
+    {
+        "instruction": "Suggest one activity to do indoors.",
+        "input": "",
+        "output": "You can try doing some indoor gardening. It's a fun and relaxing activity that allows you to connect with nature and bring some greenery into your home. You can start with easy-to-grow plants like succulents, herbs, or even some vegetables."
+    },
+    {
+        "instruction": "Reverse engineer from a design.",
+        "input": "This is a picture of a gemstone.",
+        "output": "I'm sorry, but as an AI language model, I do not have the capability to view or analyze images. Can you please provide a text description or more information about the design you would like me to reverse engineer?"
+    },
+    {
+        "instruction": "Compose a tweet in 140 characters or less summarizing the following article.",
+        "input": "An online survey has shown that many people are becoming increasingly concerned about their privacy online.",
+        "output": "Recent online survey reveals a growing concern among internet users for their privacy online. #privacyconcerns #internetsafety"
+    },
+    {
+        "instruction": "Analyze the themes presented in this literary work",
+        "input": "[insert literary work here]",
+        "output": "I'm sorry, but you haven't provided a specific literary work to analyze. In order to provide an accurate response, I need to know the title and author of the work you would like me to analyze."
+    },
+    {
+        "instruction": "Complete the sentence \"I want to be a _____ when I grow up\".",
+        "input": "",
+        "output": "I'm an AI, so I don't have the ability to grow up or have a physical occupation. But, if I were capable, I'd like to continue to help and serve people as a virtual assistant."
+    },
+    {
+        "instruction": "Name a drink that is high in sugar content.",
+        "input": "",
+        "output": "One example of a drink that is high in sugar content is soda, such as Coca-Cola or Pepsi. These beverages often contain large amounts of added sugars, which can contribute to high caloric intake and other health issues when consumed in excess."
+    },
+    {
+        "instruction": "You are given a word and your task is to create a riddle about that word.",
+        "input": "Home",
+        "output": "I am where your heart resides,  \nI am a place where love abides.  \nI’m where memories are made,  \nAnd where you often lay your head.  \nWhat am I?"
+    },
+    {
+        "instruction": "Group the words according to the root they originate from.",
+        "input": "Migration, immigrant, emigrate",
+        "output": "- Migration, immigrant, emigrate (The root word of these three words is \"migrate\", which comes from the Latin word \"migrare\" meaning \"to move from one place to another\")"
+    },
+    {
+        "instruction": "Write a mathematical expression to calculate the cost of an item purchased where the cost is $5 and tax is 6%",
+        "input": "",
+        "output": "The mathematical expression to calculate the cost of the item purchased including tax would be:\n\n`Cost = 5 + 5 * (6 / 100)`"
+    },
+    {
+        "instruction": "Is the number 3 factors of 8?",
+        "input": "",
+        "output": "No, the number 3 is not a factor of 8. Factors are numbers that can divide a given number without leaving a remainder. The factors of 8 are 1, 2, 4, and 8."
+    },
+    {
+        "instruction": "Identify the job title of the following description",
+        "input": "Manages the day-to-day operations of a department or a specific project",
+        "output": "The job title of the person who manages the day-to-day operations of a department or a specific project is likely that of a \"Manager\" or \"Project Manager\"."
+    },
+    {
+        "instruction": "Rewrite the given sentence, but keep the main idea the same.",
+        "input": "Humans, who are known for their damage to the environment, often forget about the incredible power that nature holds.",
+        "output": "Often, people overlook the immense strength of nature while being infamous for the harm they inflict upon the environment."
+    },
+    {
+        "instruction": "Produce a headline summarizing the passage below.",
+        "input": "Miriam White was the first woman to pitch a no-hitter in professional baseball in 1931.",
+        "output": "\"Miriam White: The First Woman to Pitch No-Hitter in Professional Baseball in 1931\""
+    },
+    {
+        "instruction": "Rewrite the following paragraph, changing the tone from formal to informal.",
+        "input": "Our ardent belief is that we can accomplish our goals by communicating effectively and making use of mutual understanding.",
+        "output": "We strongly believe that by just talking things out and understanding each other, we can totally reach our goals."
+    },
+    {
+        "instruction": "Compose a tweet about GPT-3.",
+        "input": "",
+        "output": "\"Have you heard about GPT-3? It's a cutting-edge AI language model that can generate human-like text and perform advanced tasks. The future is here and it's incredibly exciting! #GPT3 #AItechnology\""
+    },
+    {
+        "instruction": "Identify any errors in the following Python code.\n\ndef say_hello(name):\n    print(\"Hello %s!\" % name)\n\nsay_hello(\"John\")",
+        "input": "",
+        "output": "There are no errors in the code. The code will run successfully, and print the string \"Hello John!\" to the output."
+    },
+    {
+        "instruction": "Name a famous figure from the field of Computer Science.",
+        "input": "",
+        "output": "One famous figure from the field of Computer Science is Alan Turing. He was an English mathematician, computer scientist, logician, and cryptographer who is widely considered to be the father of theoretical computer science and artificial intelligence."
+    },
+    {
+        "instruction": "Make a funny analogy about a cloud.",
+        "input": "",
+        "output": "A cloud is like a marshmallow in the sky: it's white, fluffy, and looks like it would taste amazing, but if you ever get close enough to try it, you'd just end up with a mouthful of air."
+    },
+    {
+        "instruction": "What is the proper word for describing the kind of teaching which based on executing/applying what you heard from your teacher without thinking of it or even applying reason? To just do what you have heard.",
+        "input": "",
+        "output": "The word you are looking for is \"rote teaching\" or \"rote learning\"."
+    },
+    {
+        "instruction": "Reverse this array: [1, 2, 3, 4, 5]",
+        "input": "[1, 2, 3, 4, 5]",
+        "output": "Here is the reversed array: [5, 4, 3, 2, 1]"
+    },
+    {
+        "instruction": "Generate a 5-digit random number in a range of 10000-20000",
+        "input": "",
+        "output": "Here is a 5-digit random number in the range of 10000-20000: 14673."
+    },
+    {
+        "instruction": "Decode the following riddle.",
+        "input": "What is round, light, and can keep you safe all night?",
+        "output": "A lamp or a night light is the answer to the riddle. They are typically round, emit light, and can provide safety by lighting up a dark space at night."
+    },
+    {
+        "instruction": "Rewrite the expression using distributive property.",
+        "input": "2(x + 3y - 4z)",
+        "output": "The expression 2(x + 3y - 4z) can be rewritten using the distributive property as: 2x + 6y - 8z"
+    },
+    {
+        "instruction": "Identify the following animal.",
+        "input": "It has thick fur, a long tail, and pointed ears.",
+        "output": "Based on the information given, the animal described could be a cat, a fox, or possibly even a lynx. More information would be needed to accurately identify the specific animal."
+    },
+    {
+        "instruction": "Choose a career that is in demand.",
+        "input": "",
+        "output": "One career that is currently in high demand is a software developer. Software developers create and design computer programs, applications, and systems. With the increasing reliance on technology in almost every industry, the need for skilled software developers continues to grow."
+    }
+]
