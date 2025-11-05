@@ -1,0 +1,12 @@
+Bugfix:
+  - [ ] Add a new task
+
+Function_add:
+  - [ wt_trainer/tools/load_state_dict.py:228 ]: Add LoRA configuration (LoRA scheme for MoE models has not been added yet)
+
+Function_optimize:
+  - [ wt_trainer/tools/load_state_dict.py:363 ]: Currently for language model loading, not sure if other task models can also be loaded
+  - [ wt_trainer/tools/load_state_dict.py:563 ]: This is only for buffer usage, usability is not that high
+
+Function_change:
+  - [ ] Add a new task

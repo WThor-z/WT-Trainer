@@ -1,0 +1,93 @@
+"""Generation arguments for specifying decoding parameters."""
+
+from dataclasses import asdict
+from dataclasses import dataclass
+from dataclasses import field
+from typing import Any, Dict
+
+from transformers import GenerationConfig
+
+
+@dataclass
+class GeneratingArguments:
+    """Arguments pertaining to specify the decoding parameters."""
+
+    do_sample: bool = field(
+        default=True,
+        metadata={"help": "Whether or not to use sampling, use greedy decoding otherwise."},
+    )
+    temperature: float = field(
+        default=0.95,
+        metadata={"help": "The value used to modulate the next token probabilities."},
+    )
+    top_p: float = field(
+        default=0.7,
+        metadata={
+            "help": (
+                "The smallest set of most probable tokens with probabilities that add up to top_p or higher are kept."
+            )
+        },
+    )
+    top_k: int = field(
+        default=50,
+        metadata={
+            "help": "The number of highest probability vocabulary tokens to keep for top-k filtering."
+        },
+    )
+    num_beams: int = field(
+        default=1,
+        metadata={"help": "Number of beams for beam search. 1 means no beam search."},
+    )
+    max_length: int = field(
+        default=1024,
+        metadata={
+            "help": "The maximum length the generated tokens can have. It can be overridden by max_new_tokens."
+        },
+    )
+    max_new_tokens: int = field(
+        default=1024,
+        metadata={
+            "help": "The maximum numbers of tokens to generate, ignoring the number of tokens in the prompt."
+        },
+    )
+    repetition_penalty: float = field(
+        default=1.0,
+        metadata={
+            "help": "The parameter for repetition penalty. 1.0 means no penalty. "
+            "If answer repetition occurs, please enhance the repetition_penalty."
+        },
+    )
+    length_penalty: float = field(
+        default=1.0,
+        metadata={
+            "help": "Exponential penalty to the length that is used with beam-based generation."
+        },
+    )
+    skip_special_tokens: bool = field(
+        default=True,
+        metadata={"help": "Whether or not to remove special tokens in the decoding."},
+    )
+
+    def to_dict(self, obey_generation_config: bool = False) -> Dict[str, Any]:
+        """Convert the arguments to a dictionary.
+
+        Args:
+            obey_generation_config: If True, only keep arguments that exist in GenerationConfig.
+
+        Returns:
+            A dictionary containing the arguments.
+        """
+        args = asdict(self)
+        # Keep only max_new_tokens or max_length, not both
+        if args.get("max_new_tokens") is not None:
+            args.pop("max_length", None)
+        else:
+            args.pop("max_new_tokens", None)
+
+        if obey_generation_config:
+            generation_config = GenerationConfig()  # type: ignore
+            for key in list(args.keys()):
+                if not hasattr(generation_config, key):
+                    args.pop(key)
+
+        return args
