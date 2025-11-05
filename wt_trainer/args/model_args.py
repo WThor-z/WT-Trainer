@@ -9,34 +9,12 @@ from dataclasses import asdict
 from dataclasses import dataclass
 from dataclasses import field
 from dataclasses import fields
-from enum import Enum
-from typing import Any, Literal, List
+from typing import Any, List, Literal
 
+from wt_trainer.utils.const import AttentionFunction
+from wt_trainer.utils.const import EngineName
 from wt_trainer.utils.const import QuantizationMethod
-
-
-class RopeScaling(str, Enum):
-    """RoPE scaling strategies."""
-
-    LINEAR = "linear"
-    DYNAMIC = "dynamic"
-    YARN = "yarn"
-    LLAMA3 = "llama3"
-
-
-class AttentionFunction(str, Enum):
-    """Attention function types."""
-
-    AUTO = "auto"
-    DISABLED = "disabled"
-    SDPA = "sdpa"
-    FA2 = "fa2"
-
-
-class EngineName(str, Enum):
-    """Inference engine names."""
-
-    HF = "huggingface"
+from wt_trainer.utils.const import RopeScaling
 
 
 @dataclass
