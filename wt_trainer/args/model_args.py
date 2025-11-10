@@ -9,7 +9,7 @@ from dataclasses import asdict
 from dataclasses import dataclass
 from dataclasses import field
 from dataclasses import fields
-from typing import Any, List, Literal
+from typing import Any, Literal
 
 from wt_trainer.utils.const import AttentionFunction
 from wt_trainer.utils.const import EngineName
@@ -27,7 +27,7 @@ class _BaseModelArguments:
             "help": "Path to the model weight or identifier from huggingface.co/models or modelscope.cn/models."
         },
     )
-    adapter_name_or_path: str | List[str] | None = field(
+    adapter_name_or_path: str | None = field(
         default=None,
         metadata={
             "help": (
@@ -62,13 +62,13 @@ class _BaseModelArguments:
             "help": "Whether or not the special tokens should be split during the tokenization process."
         },
     )
-    add_tokens: str | List[str] | None = field(
+    add_tokens: str | None = field(
         default=None,
         metadata={
             "help": "Non-special tokens to be added into the tokenizer. Use commas to separate multiple tokens."
         },
     )
-    add_special_tokens: str | List[str] | None = field(
+    add_special_tokens: str | None = field(
         default=None,
         metadata={
             "help": "Special tokens to be added into the tokenizer. Use commas to separate multiple tokens."

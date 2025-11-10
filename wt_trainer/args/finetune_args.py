@@ -109,7 +109,7 @@ class ApolloArguments:
         default=False,
         metadata={"help": "Whether or not to use the APOLLO optimizer."},
     )
-    apollo_target: str | List[str] | None = field(
+    apollo_target: str | None = field(
         default="all",
         metadata={
             "help": (
@@ -162,7 +162,7 @@ class GaloreArguments:
         default=False,
         metadata={"help": "Whether or not to use the gradient low-Rank projection (GaLore)."},
     )
-    galore_target: str | List[str] | None = field(
+    galore_target: str | None = field(
         default="all",
         metadata={
             "help": (
@@ -294,7 +294,7 @@ class RLHFArguments:
 class LoraArguments:
     """Arguments pertaining to the LoRA training."""
 
-    additional_target: str | List[str] | None = field(
+    additional_target: str | None = field(
         default=None,
         metadata={
             "help": (
@@ -316,7 +316,7 @@ class LoraArguments:
         default=8,
         metadata={"help": "The intrinsic dimension for LoRA fine-tuning."},
     )
-    lora_target: str | List[str] | None = field(
+    lora_target: str | None = field(
         default="all",
         metadata={
             "help": (
@@ -380,7 +380,7 @@ class FreezeArguments:
             )
         },
     )
-    freeze_trainable_modules: str | List[str] | None = field(
+    freeze_trainable_modules: str | None = field(
         default="all",
         metadata={
             "help": (
@@ -390,7 +390,7 @@ class FreezeArguments:
             )
         },
     )
-    freeze_extra_modules: str | List[str] | None = field(
+    freeze_extra_modules: str | None = field(
         default=None,
         metadata={
             "help": (
@@ -476,7 +476,7 @@ class FinetuningArguments(
     )
 
     def __post_init__(self) -> None:
-        def split_arg(arg: str | List[str] | None) -> List[str] | None:
+        def split_arg(arg: str | None) -> List[str] | None:
             """Split comma-separated string into list of strings.
 
             Args:

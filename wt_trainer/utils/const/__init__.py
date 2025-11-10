@@ -9,10 +9,6 @@ from transformers.utils import SAFE_WEIGHTS_NAME
 from transformers.utils import WEIGHTS_INDEX_NAME
 from transformers.utils import WEIGHTS_NAME
 
-from wt_trainer.args import *
-
-MEMORY_THRESHOLD = 1024**2  # 1MB threshold for warmup
-
 
 @unique
 class QuantizationMethod(str, Enum):
@@ -46,6 +42,15 @@ class EngineName(str, Enum):
     HF = "huggingface"
 
 
+@unique
+class Role(str, Enum):
+    USER = "user"
+    ASSISTANT = "assistant"
+    SYSTEM = "system"
+    FUNCTION = "function"
+    OBSERVATION = "observation"
+
+
 CHECKPOINT_NAMES = {
     SAFE_ADAPTER_WEIGHTS_NAME,
     ADAPTER_WEIGHTS_NAME,
@@ -56,17 +61,6 @@ CHECKPOINT_NAMES = {
 }
 
 
-_TRAIN_ARGS = [
-    ModelArguments,
-    DataArguments,
-    TrainingArguments,
-    FinetuningArguments,
-    GeneratingArguments,
-]
-_TRAIN_CLS = tuple[
-    ModelArguments,
-    DataArguments,
-    TrainingArguments,
-    FinetuningArguments,
-    GeneratingArguments,
-]
+MEMORY_THRESHOLD = 1024**2  # 1MB threshold for warmup
+
+IGNORE_INDEX = -100

@@ -17,13 +17,13 @@ class DataArguments:
             "help": "Which template to use for constructing prompts in training and inference."
         },
     )
-    dataset: str | List[str] | None = field(
+    dataset: str | None = field(
         default=None,
         metadata={
             "help": "The name of dataset(s) to use for training. Use commas to separate multiple datasets."
         },
     )
-    eval_dataset: str | List[str] | None = field(
+    eval_dataset: str | None = field(
         default=None,
         metadata={
             "help": "The name of dataset(s) to use for evaluation. Use commas to separate multiple datasets."
@@ -153,7 +153,7 @@ class DataArguments:
     def __post_init__(self) -> None:
         """Process and validate arguments after initialization."""
 
-        def split_arg(arg: str | List[str] | None) -> List[str] | None:
+        def split_arg(arg: str | None) -> List[str] | None:
             """Split comma-separated string into list of strings.
 
             Args:
