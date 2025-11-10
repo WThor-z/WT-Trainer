@@ -1,0 +1,50 @@
+### model
+model_name_or_path: D:\Model\Qwen3_0.6B
+# model_name_or_path: /zhawentao/Qwen3-0.6B
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+# finetuning_type: full
+finetuning_type: lora
+lora_rank: 8
+lora_target: all
+
+### dataset
+dataset: in_100
+template: qwen3
+cutoff_len: 2048
+max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+disable_shuffling: True
+
+### output
+output_dir: saves/Qwen3-0.6B
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false0
+report_to: none  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+run_name: test_run
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+# disable_gradient_checkpointing: True # 这里可以修改，以测不同条件
+
+### quantization
+# quantization_bit: 4 # 如果是INT8的话，只需要修改为8即可
+# upcast_layernorm: True # 量化训练时要保持归一化层fp32
+
+use_cpu: true
