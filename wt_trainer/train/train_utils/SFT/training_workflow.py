@@ -1,7 +1,8 @@
 """SFT training workflow module.
 
-This module defines the supervised fine-tuning (SFT) training workflow, 
-including data loading, model initialization, and other core training logic.
+This module defines the supervised fine-tuning (SFT) training workflow,
+including tokenizer loading, template processing, dataset loading, model loading,
+and other core training logic.
 """
 
 from transformers import TrainerCallback
@@ -14,6 +15,7 @@ from wt_trainer.args import TrainingArguments
 from wt_trainer.train.trainer.trainer_utils import load_tokenizer
 from wt_trainer.utils.data import get_dataset
 from wt_trainer.utils.data import get_template_and_fix_tokenizer
+from wt_trainer.utils.model_load import load_model
 
 _TRAIN_CLS = tuple[
     ModelArguments,
@@ -34,6 +36,7 @@ def run(
     1. Load tokenizer
     2. Get template
     3. Get dataset
+    4. Load model
 
     Args:
         arguments: A tuple containing model, data, training, fine-tuning, and generation arguments
@@ -58,5 +61,8 @@ def run(
 
     # step3 : get dataset
     dataset_module = get_dataset(template, model_args, data_args, train_args, "sft", tokenizer)
+
+    # step4 : load model
+    model = load_model(model_args, ft_args)
 
     pass
