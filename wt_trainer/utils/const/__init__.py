@@ -60,6 +60,14 @@ CHECKPOINT_NAMES = {
     WEIGHTS_NAME,
 }
 
+FILEEXT2TYPE = {
+    "arrow": "arrow",
+    "csv": "csv",
+    "json": "json",
+    "jsonl": "json",
+    "parquet": "parquet",
+    "txt": "text",
+}
 
 MEMORY_THRESHOLD = 1024**2  # 1MB threshold for warmup
 
