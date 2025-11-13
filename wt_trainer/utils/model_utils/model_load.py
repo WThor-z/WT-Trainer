@@ -13,18 +13,16 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, List
 
-import torch
 from safetensors import safe_open
+import torch
 from tqdm import tqdm
-from transformers import (
-    AutoConfig,
-    AutoModelForCausalLM,
-    AutoModelForImageTextToText,
-    AutoModelForSeq2SeqLM,
-    AutoModelForTextToWaveform,
-    AutoModelForVision2Seq,
-    PreTrainedModel,
-)
+from transformers import AutoConfig
+from transformers import AutoModelForCausalLM
+from transformers import AutoModelForImageTextToText
+from transformers import AutoModelForSeq2SeqLM
+from transformers import AutoModelForTextToWaveform
+from transformers import AutoModelForVision2Seq
+from transformers import PreTrainedModel
 from transformers.modeling_utils import is_deepspeed_zero3_enabled  # type: ignore
 from transformers.modeling_utils import is_fsdp_enabled
 from transformers.quantizers import AutoHfQuantizer  # type: ignore
@@ -32,7 +30,10 @@ from transformers.utils import is_accelerate_available  # type: ignore
 from transformers.utils.quantization_config import BitsAndBytesConfig
 
 # Import arguments for better integration
-from wt_trainer.args import ModelArguments, FinetuningArguments
+from wt_trainer.args import FinetuningArguments
+from wt_trainer.args import ModelArguments
+from .liger_kernel import apply_liger_kernel
+from .model_patch import patch_config
 
 if is_accelerate_available():
     from accelerate import dispatch_model
@@ -285,6 +286,7 @@ def model_load_memory_analyze(
 def model_load_with_low_cost(
     model_args: ModelArguments,
     ft_args: FinetuningArguments,
+    is_trainable: bool,
 ) -> PreTrainedModel:
     """Load a pretrained model with memory analysis.
 
@@ -309,6 +311,15 @@ def model_load_with_low_cost(
 
     # Automatically identify configuration
     config = AutoConfig.from_pretrained(model_name_or_path, trust_remote_code=True)
+
+    # Update the model configuration and whether to use the liger kernel
+    patch_config(config, model_args, is_trainable)
+    apply_liger_kernel(
+        config,
+        model_args,
+        is_trainable,
+        require_logits=(ft_args.stage not in ["pt", "sft"]),
+    )
 
     # Build quantization configuration
     hf_quantizer = None
@@ -348,6 +359,7 @@ def model_load_with_low_cost(
             config=config,
             use_kernels=False,
         )
+        model.hf_quantizer = hf_quantizer
 
     analysis = model_load_memory_analyze(
         model=model,
