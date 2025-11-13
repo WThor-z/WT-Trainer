@@ -6,9 +6,14 @@ MoE configuration, and more.
 """
 
 import logging
-from typing import TYPE_CHECKING
 
 import torch
+from transformers import PretrainedConfig  # noqa: F401
+from transformers import PreTrainedModel  # noqa: F401
+from transformers import PreTrainedTokenizer  # noqa: F401
+from trl import AutoModelForCausalLMWithValueHead  # noqa: F401
+
+from wt_trainer.args import ModelArguments  # noqa: F401
 
 from .attention import configure_attn_implementation
 from .attention import print_attn_implementation
@@ -17,15 +22,6 @@ from .kv_cache import configure_kv_cache
 from .moe import configure_moe
 from .packing import configure_packing
 from .rope import configure_rope
-
-if TYPE_CHECKING:
-    from transformers import PretrainedConfig  # noqa: F401
-    from transformers import PreTrainedModel  # noqa: F401
-    from transformers import PreTrainedTokenizer  # noqa: F401
-    from trl import AutoModelForCausalLMWithValueHead  # noqa: F401
-
-    from wt_trainer.args import ModelArguments  # noqa: F401
-
 
 logger = logging.getLogger(__name__)
 
