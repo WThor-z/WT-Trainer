@@ -9,15 +9,16 @@ from torch import nn
 from transformers import BaseImageProcessor
 from transformers import FeatureExtractionMixin
 from transformers import PreTrainedTokenizerBase
+from transformers import ProcessorMixin  # noqa: F401
 from transformers import Seq2SeqTrainer
 from typing_extensions import override
-from transformers import ProcessorMixin  # noqa: F401
+
+from wt_trainer.args import FinetuningArguments  # noqa: F401
+from wt_trainer.utils.callbacks import SaveProcessorCallback
 
 from .trainer_utils import create_custom_optimizer
 from .trainer_utils import create_custom_scheduler
 from .trainer_utils import custom_compute_loss
-from wt_trainer.utils.callbacks import SaveProcessorCallback
-from wt_trainer.args import FinetuningArguments  # noqa: F401
 
 if TYPE_CHECKING:
     from torch.utils.data import Dataset  # noqa: F401
@@ -58,7 +59,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             PreTrainedTokenizerBase | BaseImageProcessor | FeatureExtractionMixin | ProcessorMixin
         ) | None = processing_class
 
-        super().__init__(**kwargs)
+        super().__init__(processing_class=processing_class, **kwargs)
 
         if processing_class is not None:
             # Avoid wrong loss under gradient accumulation
