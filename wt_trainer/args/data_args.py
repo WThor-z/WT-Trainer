@@ -30,7 +30,7 @@ class DataArguments:
         },
     )
     dataset_dir: str = field(
-        default="WT-Trainer/data",
+        default="data",
         metadata={"help": "Path to the folder containing the datasets."},
     )
     media_dir: str | None = field(

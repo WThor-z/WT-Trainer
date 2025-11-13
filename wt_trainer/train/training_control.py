@@ -32,4 +32,10 @@ def run_train(config_file_path: str | None = None) -> None:
 
 
 if __name__ == "__main__":
+    # Optimize logger display
+    logging.basicConfig(
+        level=logging.INFO,
+        format="[%(levelname)s | %(asctime)s] %(name)s  >>>>  %(message)s",
+        handlers=[logging.StreamHandler()],
+    )
     run_train()
