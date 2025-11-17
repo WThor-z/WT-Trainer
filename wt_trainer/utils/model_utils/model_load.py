@@ -299,7 +299,7 @@ def model_load_with_low_cost(
     """
     model_name_or_path = model_args.model_name_or_path
     device_map = model_args.device_map
-    device = "cuda"  # 默认设备
+    device = "cuda" if torch.cuda.is_available() else "cpu"  # 默认设备
     if device_map and "" in device_map:
         device = device_map[""].type
     dtype = model_args.compute_dtype if model_args.compute_dtype is not None else torch.float16
@@ -382,6 +382,10 @@ def model_load_with_low_cost(
     model = load_model(
         model_name_or_path, model, hf_quantizer=hf_quantizer, dtype=dtype, device=device
     )
+
+    # 确保模型在正确的设备上
+    if hasattr(model, "to"):
+        model = model.to(device)
 
     model.eval()
     model.requires_grad_(False)
@@ -562,6 +566,9 @@ def load_model(
     if current_shard_data is not None:
         current_shard_data = None
 
+    # Ensure the progress bar shows 100% completion
+    pbar.n = len(shard_order)
+    pbar.refresh()
     pbar.close()  # close the progress bar
 
     # Shared weights (will be determined based on Model Config)
