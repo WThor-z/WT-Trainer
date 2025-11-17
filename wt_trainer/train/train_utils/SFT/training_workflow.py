@@ -10,7 +10,6 @@ The main entry point is the `run` function which executes the complete SFT train
 
 from types import MethodType
 
-import torch
 from transformers import TrainerCallback
 
 from wt_trainer.args import DataArguments
@@ -128,8 +127,4 @@ def run(
     # step10 : train
     if train_args.do_train:
         sft_trainer.sft_train = MethodType(sft_train, sft_trainer)
-        train_output = sft_trainer.sft_train(
-            args=train_args, train_device=torch.device(model_args.device)
-        )
-
-    pass
+        train_output = sft_trainer.sft_train(args=train_args)
