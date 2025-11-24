@@ -254,7 +254,19 @@ def _setup_lora_tuning(
 
             from peft import prepare_model_for_kbit_training
 
+            # 该函数作用有以下几点：
+            # 1、将 LayerNorm 层转换为 fp32
+            # 2、使输出嵌入层需要梯度
+            # 3、将语言模型头向上转换为 fp32
+            # 4、冻结基础模型层
+            # !! 所以重点在于不能将embedding设置为requires_grad,否则极大影响训练loss
             model = prepare_model_for_kbit_training(model)
+            model.embed_tokens.requires_grad = False
+            model.lm_head.requires_grad = False
+            model.base_model.embed_tokens.weight.data = (
+                model.base_model.embed_tokens.weight.data.to(torch.bfloat16)
+            )
+            model.lm_head.weight.data = model.lm_head.weight.data.to(torch.bfloat16)
 
         model = get_peft_model(model, lora_config)
 

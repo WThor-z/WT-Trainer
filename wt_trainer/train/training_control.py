@@ -38,4 +38,4 @@ if __name__ == "__main__":
         format="[%(levelname)s | %(asctime)s] %(name)s  >>>>  %(message)s",
         handlers=[logging.StreamHandler()],
     )
-    run_train()
+    run_train("wt_trainer/train/llama3_lora_sft.yaml")
