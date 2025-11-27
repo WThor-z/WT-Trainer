@@ -261,8 +261,6 @@ def _setup_lora_tuning(
             # 4、冻结基础模型层
             # !! 所以重点在于不能将embedding设置为requires_grad,否则极大影响训练loss
             model = prepare_model_for_kbit_training(model)
-            model.base_model.embed_tokens.requires_grad = False
-            model.lm_head.requires_grad = False
             model.base_model.embed_tokens.weight.data = (
                 model.base_model.embed_tokens.weight.data.to(torch.bfloat16)
             )
