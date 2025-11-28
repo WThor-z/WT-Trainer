@@ -114,6 +114,18 @@ class _BaseModelArguments:
         default=False,
         metadata={"help": "Whether or not to enable liger kernel for faster training."},
     )
+    liger_kernel_strategy: str | None = field(
+        default=None,
+        metadata={
+            "help": "Strategy about how use liger kernel."
+            "Liger kernel strategy. Options: "
+            "'auto', 'patch', or comma-separated list of components"
+            "e.g., 'RMSNorm,SwiGLU,RoPE'. "
+            "Supported components: RMSNorm, LayerNorm, RoPE, SwiGLU, GeGLU, CrossEntropy, "
+            "Fused Linear CrossEntropy, Multi Token Attention, Softmax, Sparsemax, "
+            "alignment_kernel, distillation_kernel, exp_kernel."
+        },
+    )
     moe_aux_loss_coef: float | None = field(
         default=None,
         metadata={"help": "Coefficient of the auxiliary router loss in mixture-of-experts model."},

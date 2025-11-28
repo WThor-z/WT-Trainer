@@ -32,7 +32,6 @@ from transformers.utils.quantization_config import BitsAndBytesConfig
 # Import arguments for better integration
 from wt_trainer.args import FinetuningArguments
 from wt_trainer.args import ModelArguments
-from .liger_kernel import apply_liger_kernel
 from .model_patch import patch_config
 
 if is_accelerate_available():
@@ -314,12 +313,16 @@ def model_load_with_low_cost(
 
     # Update the model configuration and whether to use the liger kernel
     patch_config(config, model_args, is_trainable)
-    apply_liger_kernel(
-        config,
-        model_args,
-        is_trainable,
-        require_logits=(ft_args.stage not in ["pt", "sft"]),
-    )
+    if model_args.enable_liger_kernel:
+        from .liger_kernel_model import liger_kernel_model
+
+        liger_kernel_model(
+            config,
+            model_args,
+            ft_args,
+            is_trainable,
+            require_logits=(ft_args.stage not in ["pt", "sft"]),
+        )
 
     # Build quantization configuration
     hf_quantizer = None
