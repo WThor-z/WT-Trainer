@@ -39,6 +39,7 @@ warmup_ratio: 0.1
 bf16: true
 ddp_timeout: 180000000
 resume_from_checkpoint: null
+use_unsloth: True
 # disable_gradient_checkpointing: True # 这里可以修改，以测不同条件
 
 ### quantization

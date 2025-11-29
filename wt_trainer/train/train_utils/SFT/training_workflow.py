@@ -85,15 +85,34 @@ def run(
     # step3 : get dataset
     dataset_module = get_dataset(template, model_args, data_args, train_args, "sft", tokenizer)
 
-    # step4 : load model
-    model = load_model(model_args, ft_args, train_args.do_train)
+    if not model_args.use_unsloth:
+        # step4 : load model
+        model = load_model(model_args, ft_args, train_args.do_train)
 
-    # step5 : patch model
-    patch_model(model, model_args, train_args.do_train)
-    register_autoclass(model.config, model, tokenizer)
+        # step5 : patch model
+        patch_model(model, model_args, train_args.do_train)
+        register_autoclass(model.config, model, tokenizer)
 
-    # step6 : init adapter
-    model = init_adapter(model, model_args, ft_args, train_args.do_train)
+        # step6 : init adapter
+        model = init_adapter(model, model_args, ft_args, train_args.do_train)
+    else:
+        from wt_trainer.utils.model_utils import (
+            load_unsloth_pretrained_model,
+            get_unsloth_peft_model,
+        )
+
+        # Load model and tokenizer using Unsloth optimization
+        model, tokenizer = load_unsloth_pretrained_model(model_args, ft_args)
+        register_autoclass(model.config, model, tokenizer)
+        
+        # Apply PEFT training using Unsloth
+        model = get_unsloth_peft_model(model, model_args, ft_args, train_args)
+        
+        # Re-process template with the loaded tokenizer
+        template = get_template_and_fix_tokenizer(tokenizer, data_args)
+
+        # Re-load dataset with the processed template
+        dataset_module = get_dataset(template, model_args, data_args, train_args, "sft", tokenizer)
 
     # step7 : datacollator
     model.train()
