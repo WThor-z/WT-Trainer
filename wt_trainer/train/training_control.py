@@ -7,7 +7,6 @@ by coordinating different training utilities.
 import logging
 from typing import TYPE_CHECKING
 
-from wt_trainer.utils.train import get_custom_callbacks
 from wt_trainer.utils.train import read_train_args
 from wt_trainer.utils.train import train_method_select
 
@@ -27,8 +26,7 @@ def run_train(config_file_path: str | None = None) -> None:
         config_file_path: Path to the configuration file. If None, default configuration will be used.
     """
     train_config = read_train_args(config_file_path)
-    trainer_callbacks: list["TrainerCallback"] = get_custom_callbacks(train_config)
-    train_method_select(train_config, trainer_callbacks)
+    train_method_select(train_config)
 
 
 if __name__ == "__main__":

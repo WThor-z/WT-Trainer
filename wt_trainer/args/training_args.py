@@ -38,5 +38,10 @@ class TrainingArguments(Seq2SeqTrainingArguments):
         },
     )
 
+    wandb_project: str = field(
+        default="WT-Trainer",
+        metadata={"help": "The wandb project name to use for logging."},
+    )
+
     def __post_init__(self) -> None:
         Seq2SeqTrainingArguments.__post_init__(self)  # type: ignore

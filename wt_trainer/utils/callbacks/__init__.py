@@ -3,3 +3,6 @@
 
 # Processor
 from .processor_callback import SaveProcessorCallback
+
+# wandb callback
+from .wandb_callback import WandbCallback

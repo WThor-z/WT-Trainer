@@ -37,7 +37,7 @@ from .model_patch import patch_config
 if is_accelerate_available():
     from accelerate import dispatch_model
 
-MEMORY_THRESHOLD = 1024**2
+MEMORY_THRESHOLD = 2 * 1024**2
 
 logger = logging.getLogger(__name__)
 
@@ -130,6 +130,7 @@ def _calculate_weight_memory(
     return aligned, warmup_bytes
 
 
+# TODO: bugfix for LoRA, 自行分析LoRA模块，因为meta模型不包含LoRA模块，因此无法计算LoRA模块的内存占用，LoRA占用始终为0
 def _calculate_lora_memory(
     name: str,
     param: torch.nn.Parameter,

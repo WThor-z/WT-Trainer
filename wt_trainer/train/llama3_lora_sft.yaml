@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: /home/inspur/zhawentao_workspace/Qwen3_8B/
+model_name_or_path: /zhawentao/Qwen3-8B
 trust_remote_code: true
 
 ### method
@@ -41,6 +41,7 @@ ddp_timeout: 180000000
 resume_from_checkpoint: null
 enable_liger_kernel: True # 测试liger_kernel
 liger_kernel_strategy: patch # 测试liger_kernel
+# use_unsloth: True
 # disable_gradient_checkpointing: True # 这里可以修改，以测不同条件
 
 ### quantization

@@ -7,6 +7,7 @@ configuration parameters and execute the corresponding training process.
 import logging
 from typing import Any, TYPE_CHECKING
 
+from .get_custom_callbacks import get_custom_callbacks
 from .args_process import get_train_args
 
 if TYPE_CHECKING:
@@ -15,9 +16,7 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 
-def train_method_select(
-    train_config: dict[str, Any], trainer_callbacks: list["TrainerCallback"] | None = None
-) -> None:
+def train_method_select(train_config: dict[str, Any]) -> None:
     """Select and execute the appropriate training method based on configuration.
 
     Args:
@@ -29,6 +28,8 @@ def train_method_select(
     """
     try:
         model_args, data_args, train_args, ft_args, gen_args = get_train_args(train_config)
+
+        trainer_callbacks: list["TrainerCallback"] = get_custom_callbacks(train_args)
 
         if ft_args.stage == "sft":
             from wt_trainer.train.train_utils.SFT import run_sft
